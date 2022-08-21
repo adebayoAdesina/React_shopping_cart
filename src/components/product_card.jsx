@@ -1,7 +1,10 @@
 import './product_card.css'
 import Rating from './rating';
+import CartContext from '../context/cart/cart_context';
+import { useContext } from 'react'
 
 function ProductCard({ product }) {
+    const { addToCart } =  useContext(CartContext);
     return (
         <div className="productCard_wrapper">
             <div>
@@ -13,7 +16,7 @@ function ProductCard({ product }) {
                 <div className="productCard_rating">
                     <Rating value = {product.rating} text={`${product.numReviews} reviews`}/>
                 </div>
-                <button className="productCard_button">
+                <button className="productCard_button" onClick={()=>addToCart(product)}>
                     Add to Cart
                 </button>
             </div>

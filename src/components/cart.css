@@ -1,0 +1,27 @@
+.cart_wrapper {
+    position: fixed;
+    top: 60px;
+    right: 20px;
+    border-radius: 12px;
+    background-color: white;
+    border: 1px solid gray;
+    padding: 10px;
+    z-index: 10;
+}
+
+.cart_innerWrapper {
+    height: max-content;
+    max-height: 50vh;
+    overflow: auto;
+}
+
+.cart_cartTotal {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.fa-time-circle {
+    color: grey;
+    transition: transform 0.2s linear;
+}

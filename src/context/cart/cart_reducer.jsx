@@ -12,13 +12,13 @@ const CartReducer = (state, action) => {
                 ...state,
                 cartItem: [...state.cartItem, action.payload]
             }
-        case Remove_Item:
+        case REMOVE_ITEM:
             return {
                 ...state,
-                cartItem: state.cartItem.filter(item => item.id !== action.payload)
+                cartItem: state.cartItem.filter(item => item._id !== action.payload)
             }
         default:
-            break;
+            return state
     }
 }
 

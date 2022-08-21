@@ -1,13 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-
+import './index.css'
 import App from './app.jsx';
 import reportWebVitals from './reportWebVitals';
+import CartState from './context/cart/cart_state';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App/>
+    <CartState>
+      <App />
+    </CartState>
   </React.StrictMode>
 );
 

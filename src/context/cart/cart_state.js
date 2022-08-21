@@ -25,7 +25,7 @@ const CartState = ({ children }) => {
     return (
         <CartContext.Provider value={{
             showCart: state.showCart, cartItem: state.cartItem, addToCart, showHideCart, removeItem
-        }}></CartContext.Provider>
+        }}>{children}</CartContext.Provider>
     )
 }
 
